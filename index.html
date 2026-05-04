@@ -4,186 +4,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumina Skincare | Exceptional Beauty, Scientific Care</title>
+    <meta name="description"
+        content="Lumina Skincare pairs botanical ingredients with dermatologist-inspired routines for hydrated, calm, radiant skin.">
+    <meta name="theme-color" content="#f7fbf8">
+    <title>Lumina Skincare | Botanical Care, Visible Glow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preload" as="image" href="assets/hero.jpg" fetchpriority="high">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <noscript>
+        <style>
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        </style>
+    </noscript>
 </head>
 
 <body>
-    <nav class="glass" id="navbar">
+    <a class="skip-link" href="#products">Skip to products</a>
+
+    <nav class="site-nav" id="navbar" aria-label="Primary navigation">
         <div class="container nav-content">
-            <a href="#" class="logo serif">LUMINA</a>
-            <ul class="nav-links">
+            <a href="#home" class="logo serif" aria-label="Lumina home">LUMINA</a>
+
+            <ul class="nav-links" id="primary-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#products">Shop</a></li>
                 <li><a href="#guide">Skin Guide</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#ingredients">Science</a></li>
             </ul>
+
             <div class="nav-actions">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <i class="fa-solid fa-cart-shopping"></i>
-                <i class="fa-solid fa-bars mobile-menu-btn"></i>
+                <button class="icon-button search-toggle" type="button" aria-label="Search products"
+                    aria-expanded="false" aria-controls="site-search">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <path d="m16.5 16.5 4 4"></path>
+                    </svg>
+                </button>
+                <button class="icon-button cart-button" type="button" aria-label="Shopping bag">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 8h12l-1 12H7L6 8Z"></path>
+                        <path d="M9 8a3 3 0 0 1 6 0"></path>
+                    </svg>
+                    <span class="cart-count" aria-live="polite">0</span>
+                </button>
+                <button class="icon-button mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false"
+                    aria-controls="primary-menu">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 7h16"></path>
+                        <path d="M4 12h16"></path>
+                        <path d="M4 17h16"></path>
+                    </svg>
+                </button>
             </div>
         </div>
     </nav>
 
-    <header id="home" class="hero">
-        <div class="container hero-content">
-            <div class="hero-text reveal">
-                <h1 class="serif">Your Skin, <br><span class="accent-gradient">Redefined.</span></h1>
-                <p>Discover the perfect harmony of nature and science. Lumina provides personalized skincare solutions
-                    for your unique glow.</p>
-                <div class="hero-btns">
-                    <a href="#products" class="btn btn--primary">Explore Shop</a>
-                    <a href="#guide" class="btn btn--outline">Find Your Type</a>
-                </div>
-            </div>
-            <div class="hero-visual reveal">
-                <div class="floating-glass glass">
-                    <p class="serif">Pure Radiance</p>
-                    <small>Dermatologically Tested</small>
-                </div>
-                <div class="hero-image-wrapper floating">
-                    <img src="assets/hero.jpg" alt="Lumina Hero Collection" class="hero-img">
-                </div>
-            </div>
+    <div class="search-panel" id="site-search" hidden>
+        <div class="container search-panel-content">
+            <label class="visually-hidden" for="product-search">Search Lumina products</label>
+            <input id="product-search" type="search" autocomplete="off" placeholder="Search serums, creams, cleansers">
+            <button class="text-button search-close" type="button">Close</button>
         </div>
-    </header>
+    </div>
 
-    <section id="guide" class="guide">
-        <div class="container">
-            <div class="section-title reveal">
-                <h2>The Skin Type Guide</h2>
-                <p>Understanding your skin is the first step to exceptional care.</p>
+    <main>
+        <header id="home" class="hero" aria-labelledby="hero-title">
+            <img src="assets/hero.jpg" width="1200" height="1800" alt="" class="hero-bg" fetchpriority="high">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content reveal">
+                <p class="eyebrow">Dermatologist inspired botanical care</p>
+                <h1 id="hero-title" class="serif">LUMINA</h1>
+                <p class="hero-copy">Clean hydration, barrier support, and brightening actives in routines that feel
+                    calm, modern, and easy to keep.</p>
+                <div class="hero-actions">
+                    <a href="#products" class="btn btn--primary">Shop Collection</a>
+                    <a href="#guide" class="btn btn--light">Build Routine</a>
+                </div>
+                <dl class="hero-proof">
+                    <div>
+                        <dt>24h</dt>
+                        <dd>moisture support</dd>
+                    </div>
+                    <div>
+                        <dt>0%</dt>
+                        <dd>added fragrance</dd>
+                    </div>
+                    <div>
+                        <dt>4</dt>
+                        <dd>skin-type paths</dd>
+                    </div>
+                </dl>
             </div>
-            <div class="guide-grid">
-                <div class="guide-card glass reveal">
-                    <div class="guide-img-box">
-                        <img src="assets/product1.jpg" alt="Oily Skin Care">
-                    </div>
-                    <h3 class="serif">Oily Skin</h3>
-                    <p>Balance sebum production with lightweight formulas.</p>
-                </div>
-                <div class="guide-card glass reveal">
-                    <div class="guide-img-box">
-                        <img src="assets/lifestyle.jpg" alt="Dry Skin Care">
-                    </div>
-                    <h3 class="serif">Dry Skin</h3>
-                    <p>Deeply nourish and repair your skin barrier.</p>
-                </div>
-                <div class="guide-card glass reveal">
-                    <div class="guide-img-box">
-                        <img src="assets/ing3.jpg" alt="Combination Skin Care">
-                    </div>
-                    <h3 class="serif">Combination</h3>
-                    <p>Targeted care for different zones of your face.</p>
-                </div>
-                <div class="guide-card glass reveal">
-                    <div class="guide-img-box">
-                        <img src="assets/ing2.jpg" alt="Sensitive Skin Care">
-                    </div>
-                    <h3 class="serif">Sensitive</h3>
-                    <p>Calm and protect with minimalist botanical care.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </header>
 
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <div class="section-title reveal">
-                <h2>The Lumina Glow</h2>
-                <p>Experience the art of skincare through our community lens.</p>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item w-2 reveal">
-                    <img src="assets/lifestyle.jpg" alt="Lifestyle Glow">
+        <section id="guide" class="guide">
+            <div class="container">
+                <div class="section-title reveal">
+                    <p class="section-kicker">Skin Guide</p>
+                    <h2 class="serif">A routine that matches your skin today.</h2>
+                    <p>Choose a skin mood and Lumina will surface the products and actives that make the most sense.</p>
                 </div>
-                <div class="gallery-item h-2 reveal">
-                    <img src="assets/product1.jpg" alt="Product Texture">
-                </div>
-                <div class="gallery-item reveal">
-                    <img src="assets/hero.jpg" alt="Serum Spotlight">
-                </div>
-                <div class="gallery-item reveal">
-                    <img src="assets/ing3.jpg" alt="Luxury Packaging">
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="ingredients" class="ingredients">
-        <div class="container">
-            <div class="section-title reveal">
-                <h2>Nature's Lab</h2>
-                <p>Pure extracts, powerful results.</p>
-            </div>
-            <div class="ingredient-highlights">
-                <div class="ing-card reveal">
-                    <div class="ing-img">
-                        <img src="assets/ing2.jpg" alt="Aloe Vera" class="mask-blob">
+                <div class="routine-layout reveal">
+                    <div class="skin-tabs" role="tablist" aria-label="Skin type routine selector">
+                        <button class="skin-tab active" type="button" role="tab" aria-selected="true"
+                            aria-controls="routine-panel"
+                            data-skin="oily">Oily</button>
+                        <button class="skin-tab" type="button" role="tab" aria-selected="false"
+                            aria-controls="routine-panel"
+                            data-skin="dry">Dry</button>
+                        <button class="skin-tab" type="button" role="tab" aria-selected="false"
+                            aria-controls="routine-panel"
+                            data-skin="combination">Combination</button>
+                        <button class="skin-tab" type="button" role="tab" aria-selected="false"
+                            aria-controls="routine-panel"
+                            data-skin="sensitive">Sensitive</button>
                     </div>
-                    <h4 class="serif">Aloe Vera</h4>
-                    <p>The ultimate hydrator for stressed skin.</p>
-                </div>
-                <div class="ing-card reveal">
-                    <div class="ing-img">
-                        <img src="assets/ing3.jpg" alt="Ingredient Focus" class="mask-blob">
-                    </div>
-                    <h4 class="serif">Botanical Essence</h4>
-                    <p>Natural Vitamin C for instant brightening.</p>
-                </div>
-                <div class="ing-card reveal">
-                    <div class="ing-img">
-                        <img src="assets/lifestyle.jpg" alt="Science Lab" class="mask-blob">
-                    </div>
-                    <h4 class="serif">Scientific Purity</h4>
-                    <p>Repairing antioxidants for every skin type.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="products" class="products">
-        <div class="container">
-            <div class="section-title reveal">
-                <h2>Our Collection</h2>
+                    <article class="routine-panel" id="routine-panel" role="tabpanel" tabindex="0">
+                        <div class="routine-copy">
+                            <p class="eyebrow">Balanced Glow</p>
+                            <h3 class="serif">Lightweight hydration with a clear finish.</h3>
+                            <p data-routine-text>Start with Velvet Foam, layer Glow Elixir, then seal only the dry areas
+                                with Dew Barrier.</p>
+                        </div>
+                        <div class="routine-steps">
+                            <span>Cleanse</span>
+                            <span>Treat</span>
+                            <span>Seal</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="products">
+            <div class="container">
+                <div class="section-title reveal">
+                    <p class="section-kicker">Shop</p>
+                    <h2 class="serif">The daily glow edit.</h2>
+                    <p>Three focused formulas for a clean, consistent skincare ritual.</p>
+                </div>
+
                 <div class="product-grid">
-                    <div class="product-card reveal">
-                        <div class="product-image glass">
-                            <img src="assets/product1.jpg" alt="Glow Elixir">
+                    <article class="product-card reveal" data-product="Glow Elixir vitamin serum brightening">
+                        <figure class="product-media">
+                            <img src="assets/ing2.jpg" width="400" height="600" alt="Glow Elixir skincare tube"
+                                decoding="async">
+                        </figure>
+                        <div class="product-body">
+                            <p class="product-tag">Vitamin C + aloe</p>
+                            <h3 class="serif">Glow Elixir</h3>
+                            <p>Silky serum for fresher tone and a soft, hydrated finish.</p>
+                            <div class="product-footer">
+                                <span class="price">$48</span>
+                                <button class="shop-button" type="button" data-add="Glow Elixir">Add</button>
+                            </div>
                         </div>
-                        <h3 class="serif">Glow Elixir</h3>
-                        <p class="price">$48.00</p>
-                    </div>
-                    <div class="product-card reveal">
-                        <div class="product-image glass">
-                            <img src="assets/hero.jpg" alt="Velvet Foam">
+                    </article>
+
+                    <article class="product-card reveal" data-product="Velvet Foam cleanser calming">
+                        <figure class="product-media">
+                            <img src="assets/hero.jpg" width="1200" height="1800" alt="Velvet Foam cleanser packaging"
+                                decoding="async">
+                        </figure>
+                        <div class="product-body">
+                            <p class="product-tag">Amino acids</p>
+                            <h3 class="serif">Velvet Foam</h3>
+                            <p>Low-stripping daily cleanse that leaves skin comfortable.</p>
+                            <div class="product-footer">
+                                <span class="price">$32</span>
+                                <button class="shop-button" type="button" data-add="Velvet Foam">Add</button>
+                            </div>
                         </div>
-                        <h3 class="serif">Velvet Foam</h3>
-                        <p class="price">$32.00</p>
-                    </div>
-                    <div class="product-card reveal">
-                        <div class="product-image glass">
-                            <img src="assets/lifestyle.jpg" alt="Dew Barrier">
+                    </article>
+
+                    <article class="product-card reveal" data-product="Dew Barrier cream ceramide moisturizer">
+                        <figure class="product-media">
+                            <img src="assets/lifestyle.jpg" width="1200" height="800" alt="Dew Barrier cream in use"
+                                decoding="async">
+                        </figure>
+                        <div class="product-body">
+                            <p class="product-tag">Ceramides</p>
+                            <h3 class="serif">Dew Barrier</h3>
+                            <p>Featherweight cream for bounce, comfort, and barrier care.</p>
+                            <div class="product-footer">
+                                <span class="price">$54</span>
+                                <button class="shop-button" type="button" data-add="Dew Barrier">Add</button>
+                            </div>
                         </div>
-                        <h3 class="serif">Dew Barrier</h3>
-                        <p class="price">$54.00</p>
-                    </div>
+                    </article>
+                </div>
+                <p class="empty-state" hidden>No matching products found.</p>
+            </div>
+        </section>
+
+        <section id="ingredients" class="ingredients">
+            <div class="container ingredients-layout">
+                <div class="section-title align-left reveal">
+                    <p class="section-kicker">Science</p>
+                    <h2 class="serif">Clinical calm, botanical brightness.</h2>
+                    <p>Lumina keeps the formula story focused: barrier-friendly hydrators, antioxidant support, and no
+                        unnecessary fragrance.</p>
+                </div>
+
+                <div class="ingredient-list">
+                    <article class="ingredient-item reveal">
+                        <img src="assets/ing2.jpg" width="400" height="600" alt="Aloe vera ingredient"
+                            decoding="async">
+                        <div>
+                            <h3 class="serif">Aloe Vera</h3>
+                            <p>Soothing hydration for skin that feels tight after cleansing.</p>
+                        </div>
+                    </article>
+                    <article class="ingredient-item reveal">
+                        <img src="assets/ing3.jpg" width="400" height="267" alt="Botanical brightening ingredient"
+                            decoding="async">
+                        <div>
+                            <h3 class="serif">Botanical Vitamin C</h3>
+                            <p>Daily radiance support without a heavy or sticky finish.</p>
+                        </div>
+                    </article>
+                    <article class="ingredient-item reveal">
+                        <img src="assets/lifestyle.jpg" width="1200" height="800" alt="Minimal skincare routine"
+                            decoding="async">
+                        <div>
+                            <h3 class="serif">Ceramide Blend</h3>
+                            <p>Barrier comfort for skin that needs a softer landing.</p>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="glass">
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <div class="section-title reveal">
+                    <p class="section-kicker">Gallery</p>
+                    <h2 class="serif">Textures, rituals, and shelf moments.</h2>
+                    <p>A closer look at the Lumina mood in real skincare routines.</p>
+                </div>
+                <div class="gallery-grid">
+                    <figure class="gallery-item gallery-wide reveal">
+                        <img src="assets/lifestyle.jpg" width="1200" height="800" alt="Skincare lifestyle scene"
+                            decoding="async">
+                    </figure>
+                    <figure class="gallery-item gallery-tall reveal">
+                        <img src="assets/ing2.jpg" width="400" height="600" alt="Lumina skincare tube"
+                            decoding="async">
+                    </figure>
+                    <figure class="gallery-item reveal">
+                        <img src="assets/ing3.jpg" width="400" height="267" alt="Botanical ingredient close up"
+                            decoding="async">
+                    </figure>
+                    <figure class="gallery-item reveal">
+                        <img src="assets/hero.jpg" width="1200" height="1800" alt="Lumina skincare hero product"
+                            decoding="async">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+        <section id="chatbot" class="chatbot">
+            <div class="container">
+                <div class="section-title reveal">
+                    <p class="section-kicker">Chat</p>
+                    <h2 class="serif">Ask our virtual skincare assistant</h2>
+                    <p>Chat with our support assistant powered by Chatbase.</p>
+                </div>
+                <div class="chatbot-frame reveal">
+                    <iframe
+                        src="https://www.chatbase.co/chatbot-iframe/I-ap16kEL8QdhCtuYSo-w"
+                        width="100%"
+                        style="height: 100%; min-height: 700px; border: 0;"
+                        frameborder="0"
+                        allow="microphone">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
         <div class="container footer-content">
-            <h2 class="serif">LUMINA</h2>
-            <p>&copy; 2024 Premium Skincare. Experience the light.</p>
+            <a href="#home" class="logo serif">LUMINA</a>
+            <p>&copy; 2026 Lumina Skincare. Botanical care for modern skin.</p>
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    <div class="toast" role="status" aria-live="polite" hidden></div>
+
+    <script src="main.js" defer></script>
 </body>
 
 </html>
